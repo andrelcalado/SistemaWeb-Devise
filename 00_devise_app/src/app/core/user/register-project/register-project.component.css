@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+    font-family: "AsapMedium";
+    box-shadow:none;
+}
+
+*:focus {
+    border: rgb(241, 78, 61)
+}
+label{
+    font-family: "MuseoSans";
+    font-size: 18px;
+    font-weight: 400
+}
+p{
+    font-family: "MuseoSans"
+}
+::placeholder{
+    font-family: "MuseoSans";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.outline:focus {
+    box-shadow: 0 0 0 4px rgba(241, 78, 61, .5);
+}
+
+.outlined{
+    box-shadow: 0 0 0 4px rgba(241, 78, 61, .5);
+}
+
+.projeto{
+    margin-left: 100px;
+}
+.moradia{
+    margin-left: 100px;
+}
+
+.dados-topograficos{
+    margin-left: 100px;
+}
+
+.back-btn {
+    position: fixed;
+    top: 11%;
+    left: 0;
+    width: 18%;
+    height: 5%;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, .3);
+    border-radius: 0px 20px 20px 0px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 150ms;
+    z-index: 10;
+}
+
+.back-btn:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, .2)
+}
+
+.register-menu {
+    position: fixed;
+    height: calc(100vh - 80px);
+    width: 100%;
+    padding: 100px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fases {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fase-btn {
+    margin: 8px 0px;
+    width: 100%;
+    border-radius: 7px;
+    background-color: rgb(228, 228, 228);
+    padding: 13px 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 150ms;
+}
+
+.fase-btn:hover {
+    background-color: white;
+}
+
+.select {
+    background-color: white;
+}
+
+.register-body {
+    margin-left: 356px;
+    padding: 50px 0px;
+}
+
+.form-container{
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background-color: rgb(228, 228, 228);
+    padding: 20px;
+}
+
+.register-body .new-proj-btn {
+    border-radius: 7px;
+    padding: 10px 20px;
+    background-color: rgb(241, 78, 61);
+    color: white;
+    font-size: 20px;
+}
+
+.list-panel{
+    margin: 5px 0px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.tab-btns {
+    min-width: 140px;
+    width: fit-content;
+    margin: 5px 10px;
+    padding: 5px 18px;
+    border-radius: 7px 7px 0px 0px;
+    background: rgb(241, 78, 61);
+    color: white;
+    transition: all 150ms;
+    font-size: 20px;
+}
+
+.btn-partes:hover {
+    color: black;
+    background: white;
+}
+
+.detalhes-panel {
+    width: 100%;
+    height: 100%;
+}
+
+.detalhes-h{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px 0px 0px 0px;
+}
+
+.detalhes-h h5{
+    margin-right: 50px;
+}
+
+.add-integrante {
+    background-color: rgb(241, 78, 61);
+    
+    color: white;
+}
+
+.rm-elemento{
+    background-color: rgb(241, 78, 61);
+    color: white;
+    padding: 0px 5px;
+}
+
+.detalhes-body{
+    border-radius: 7px;
+    border: 1px solid rgba(0, 0, 0, .3);
+    padding: 20px;
+    margin: 5px 0px 30px 0px;
+}
+
+.add-cliente-btn{
+    background-color: rgb(241, 78, 61);
+    color: white;
+    font-family: "AsapMedium";
+}
+
+.del-integrante{
+    background-color: rgb(241, 78, 61);
+    color: white;
+    margin: 0px;
+    font-weight: bolder;
+}
+
+
+
+/* 
+Abaixo, classes gerais da pagina
+*/
+.outline:focus {
+    box-shadow: 0 0 0 4px rgba(241, 78, 61, .5);
+}
+.selected {
+    box-shadow: 0 0 0 2px rgb(241, 79, 61);
+    background-color: white;
+    color: black;
+}
+

@@ -1,0 +1,178 @@
+<div class="register-modal-body" (click)="toHome()">
+</div>
+<div class="register-container">
+  <h2>Crie sua conta Devise</h2>
+  <!-- Accordeon -->
+  <div id="accordion">
+
+    <!-- Profissional -->
+    <div class="card">
+
+      <div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+        aria-controls="collapseOne">
+        <h4 class="mb-0">
+          Profissional
+        </h4>
+      </div>
+
+      <!-- Corpo -->
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
+          <form (ngSubmit)="onSubmitProf(registerForm)" #registerForm="ngForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control outline" required name="nome" id="nome" placeholder="Nome"
+                  [(ngModel)]="profissional.nome" #nome='ngModel'>
+
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control outline" required name="sobrenome" id="sobrenome"
+                  placeholder="Sobrenome" [(ngModel)]="profissional.sobrenome" #sobrenome='ngModel'>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="dataNasc">Data de nascimento</label>
+                <input type="date" required class="form-control outline" name="dataNasc" id="datanasc"
+                  [(ngModel)]="profissional.dataNasc" #dataNasc='ngModel'>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="telefone">Telefone</label>
+                <input type="text" required class="form-control outline" name="telefone" id="telefone"
+                  [(ngModel)]="profissional.numeroTel" #telefone='ngModel'>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="sexo">Sexo</label>
+                <select class="custom-select outline" required id="sexo" name="sexo" [(ngModel)]="profissional.sexo"
+                  #sexo="ngModel">
+                  <option value="feminino">Feminino</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="nf">Prefiro não informar</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="profissao">Tipo de profissão</label>
+                <select name="profissao" required id="profissao" class="custom-select outline" id="profissao"
+                  [(ngModel)]="profissional.tipoProfissao" #profissao="ngModel">
+                  <option value="1">Arquiteto</option>
+                  <option value="2" disabled>Designer de Interiores</option>
+                  <option value="3" disabled>Engenheiro</option>
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="nCau">Nº de Registro Profissional</label>
+                <input type="text" required class="form-control outline" name="nCau" placeholder="Número de Registro"
+                  id="nCau" [(ngModel)]="profissional.nCau" #nCau="ngModel">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" required class="form-control outline" id="email" name="email" placeholder="Email"
+                  [(ngModel)]="profissional.email" #email="ngModel">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control outline" id="senha" name="senha" placeholder="Senha"
+                  [(ngModel)]="profissional.senha" #senha="ngModel">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="confSenha">Confirmar senha</label>
+                <input type="password" class="form-control outline" id="confSenha" placeholder="Confirmar senha">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary outline">Cadastrar</button>
+            <a [routerLink]="[ '/login']" class=ml-2>Já possui uma conta?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cliente -->
+    <div class="card">
+      <div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+        aria-controls="collapseTwo">
+        <h4 class="mb-0">
+          Cliente
+        </h4>
+      </div>
+
+      <!-- Corpo -->
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+        <div class="card-body">
+          <form (ngSubmit)="onSubmitCli(registerFormCliente)" #registerFormCliente="ngForm">
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" class="form-control outline" required name="nomeCli" id="nomeCli" placeholder="Nome"
+                  [(ngModel)]="cliente.nome" #nomeCli='ngModel'>
+
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="sobrenome">Sobrenome</label>
+                <input type="text" class="form-control outline" required name="sobrenomeCli" id="sobrenomeCli"
+                  placeholder="Sobrenome" [(ngModel)]="cliente.sobrenome" #sobrenomeCli='ngModel'>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="dataNasc">Data de nascimento</label>
+                <input type="date" required class="form-control outline" name="dataNascCli" id="datanascCli"
+                  [(ngModel)]="cliente.dataNasc" #dataNascCli='ngModel'>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="telefone">Telefone</label>
+                <input type="text" required class="form-control outline" name="telefoneCli" id="telefoneCli"
+                  [(ngModel)]="cliente.numeroTel" #telefoneCli='ngModel'>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="sexo">Sexo</label>
+                <select class="custom-select outline" required id="sexoCli" name="sexoCli" [(ngModel)]="cliente.sexo"
+                  #sexoCli="ngModel">
+                  <option value="feminino">Feminino</option>
+                  <option value="masculino">Masculino</option>
+                  <option value="nf">Prefiro não informar</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="email">Email</label>
+                <input type="email" required class="form-control outline" id="emailCli" name="emailCli" placeholder="Email utilizado no login"
+                  [(ngModel)]="cliente.email" #emailCli="ngModel">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="senha">Senha</label>
+                <input type="password" class="form-control outline" id="senhaCli" name="senhaCli" placeholder="Senha"
+                  [(ngModel)]="cliente.senha" #senhaCli="ngModel">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="confSenha">Confirmar senha</label>
+                <input type="password" class="form-control outline" id="confSenhaCli" placeholder="Confirmar senha">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary outline">Cadastrar</button>
+            <a [routerLink]="[ '/login']" class=ml-2>Já possui uma conta?</a>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
