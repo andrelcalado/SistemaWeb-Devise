@@ -6,7 +6,9 @@ A plataforma Devise objetiva transparecer as etapas do processo de uma construç
 
 ## Requesitos
 > [Node.js](https://nodejs.org/) para a instação das dependências;
+
 > [Angular/Cli](https://angular.io/guide/setup-local) para a execução da aplicação;
+
 > [MongoDB](https://www.mongodb.com/download-center) para a execução do Mongoose.
 
 ## Execução do Projeto
